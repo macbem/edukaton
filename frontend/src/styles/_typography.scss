@@ -1,0 +1,57 @@
+.edu-heading {
+
+  &--hero {
+
+  }
+
+  &--primary {
+
+  }
+
+  &--secondary {
+
+  }
+}
+
+.edu-copy {
+
+  &--large {
+
+  }
+
+  &--small {
+
+  }
+
+  &--x-small {
+
+  }
+
+  &--light {
+
+  }
+
+  &--dark {
+
+  }
+
+  &--x-dark {
+
+  }
+
+  &--semi {
+    @include font-weight(semi);
+  }
+
+  &--bold {
+    @include font-weight(bold);
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}
+
+.text-center {
+  text-align: center;
+}

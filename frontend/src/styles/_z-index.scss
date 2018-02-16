@@ -1,0 +1,7 @@
+$zIndexes: (
+
+);
+
+@function getIndex($zIndexName) {
+  @return map-get($zIndexes, $zIndexName);
+}

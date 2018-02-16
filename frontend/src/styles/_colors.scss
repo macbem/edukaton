@@ -1,0 +1,28 @@
+$palette-colors: (
+  black: (
+    base: #000
+  ),
+  gray: (
+    ultra-light: #f8f9fc,
+    x-light: #f5f7fc,
+    light: #eceef3,
+    semi-light: #e7e9f1,
+    mid-light: #d3d7dc,
+    base: #aebac7,
+    light-dark: #abb4bd,
+    mid-dark: #99a3ae,
+    dark: #4e576e
+  ),
+  white: (
+    base: #fff,
+  )
+);
+
+
+@function palette($palette, $tone: 'base') {
+  @return map-get(map-get($palette-colors, $palette), $tone);
+}
+
+@function pal($palette, $tone: 'base') {
+  @return palette($palette, $tone);
+}
