@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  contactOptionsMenuActive = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggleContactMenu() {
+    this.contactOptionsMenuActive = !this.contactOptionsMenuActive
+  }
 }

@@ -1,8 +1,36 @@
 .contact-options {
   height: 100vh;
   position: fixed;
-  width: 475px;
+  width: 400px;
   top: 0;
-  right: 0;
+  right: -400px;
   background: #fff;
+  transition: 0.5s ease;
+
+  .content {
+    padding: 150px 55px 55px;
+    height: inherit;
+
+    .numbers {
+      margin: 70px 0;
+
+      .heading {
+        margin: 10px 0;
+      }
+
+      .number {
+        margin: 40px 0;
+      }
+    }
+
+    &-contact {
+      button {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &.active {
+    right: 0;
+  }
 }
