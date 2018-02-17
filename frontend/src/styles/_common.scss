@@ -31,3 +31,51 @@
     max-width: 700px;
   }
 }
+
+.go-to-step {
+  background-color: pal(white);
+  width: 58px;
+  height: 58px;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+
+  .chevron {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 13px;
+      height: 13px;
+      border-style: solid;
+      border-color: pal(gray);
+      border-width: 2px 2px 0 0;
+      position: absolute;
+    }
+
+    &.left:before {
+      transform: rotate(-135deg);
+      margin: -15px 0 0 -10px;
+      top: 34px;
+      left: 34px;
+    }
+
+    &.right:before {
+      transform: rotate(45deg);
+      margin: -15px 0 0 -20px;
+      top: 34px;
+      left: 34px;
+    }
+
+    &--active {
+      &:before {
+        border-color: pal(black);
+      }
+    }
+  }
+}
