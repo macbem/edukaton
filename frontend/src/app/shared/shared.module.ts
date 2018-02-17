@@ -7,6 +7,12 @@ import { TestComponent } from './test/test.component';
   imports: [
     CommonModule
   ],
-  declarations: [NavComponent, TestComponent]
+  declarations: [
+    NavComponent,
+    TestComponent
+  ],
+  exports: [
+    NavComponent
+  ]
 })
 export class SharedModule { }

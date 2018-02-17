@@ -1,0 +1,5 @@
+@import '../styles.scss';
+
+p {
+  @include font(12, bold);
+}
