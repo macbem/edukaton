@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ApiModule } from './api/api.module';
+import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from "./shared/shared.module";
+import { StudentModule } from './student/student.module';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
@@ -14,8 +17,11 @@ import { StudentModule } from './student/student.module';
   ],
   imports: [
     BrowserModule,
-    SharedModule,
+    BrowserAnimationsModule,
     ApiModule,
+    AppRoutingModule,
+    SharedModule,
+    StudentModule
     AuthModule,
     StudentModule,
   ],
