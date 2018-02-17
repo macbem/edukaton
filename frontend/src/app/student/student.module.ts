@@ -14,6 +14,7 @@ import { CardComponent } from './guide/card/card.component';
 import { TutorialContainerComponent } from './guide/tutorial-container/tutorial-container.component';
 import { TutorialNavComponent } from './guide/tutorial-nav/tutorial-nav.component';
 import { RouterModule } from '@angular/router';
+import { FakeNewsSlideContainerComponent } from './guide/slide-containers/fake-news-slide-container/fake-news-slide-container.component';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import { RouterModule } from '@angular/router';
     FakenewsSlidesComponent,
     CardComponent,
     TutorialContainerComponent,
-    TutorialNavComponent
+    TutorialNavComponent,
+    FakeNewsSlideContainerComponent
   ],
   exports: [
     TestComponent,
