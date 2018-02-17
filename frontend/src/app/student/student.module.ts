@@ -7,7 +7,6 @@ import { SharedModule } from '../shared/shared.module';
 import { TestComponent } from './test/test.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SummaryComponent } from './guide/summary/summary.component';
-import { TutorialIntroComponent } from './guide/intro/tutorial-intro/tutorial-intro.component';
 import { FakenewsIntroComponent } from './guide/intro/fakenews-intro/fakenews-intro.component';
 import { FakenewsSlidesComponent } from './guide/slides/fakenews-slides/fakenews-slides.component';
 import { CardComponent } from './guide/card/card.component';
@@ -27,7 +26,6 @@ import { FakeNewsSlideContainerComponent } from './guide/slide-containers/fake-n
     TestComponent,
     DashboardComponent,
     SummaryComponent,
-    TutorialIntroComponent,
     FakenewsIntroComponent,
     FakenewsSlidesComponent,
     CardComponent,
@@ -39,7 +37,6 @@ import { FakeNewsSlideContainerComponent } from './guide/slide-containers/fake-n
     TestComponent,
     DashboardComponent,
     SummaryComponent,
-    TutorialIntroComponent,
     FakenewsIntroComponent,
     FakenewsSlidesComponent,
     CardComponent

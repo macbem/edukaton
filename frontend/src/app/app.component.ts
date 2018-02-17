@@ -11,7 +11,6 @@ import { NavInsideMenuComponent } from "./shared/nav/nav-inside-menu/nav-inside-
 export class AppComponent {
   @ViewChild('menu') menu: NavInsideMenuComponent;
   title = 'app';
-  isRouteLogin: any;
 
   constructor() {}
 

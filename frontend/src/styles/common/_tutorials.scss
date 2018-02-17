@@ -5,6 +5,9 @@
 }
 
 .tutorial {
+  color: pal(white);
+  margin: 100px 0 150px;
+
   @include media(md-up) {
     width: 90%;
   }
