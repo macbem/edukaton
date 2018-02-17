@@ -1,5 +1,11 @@
 @import '../styles.scss';
 
+.app {
+  background-image: url('/assets/images/background@2x.png');
+  background-position: 30% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .nav {
   height: 100vh;
@@ -18,4 +24,10 @@
   right: 0;
   top: 34px;
   z-index: 1000;
+}
+
+.white-cloud {
+  position: fixed;
+  top: 100px;
+  right: 0;
 }
