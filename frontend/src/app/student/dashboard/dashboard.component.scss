@@ -1,6 +1,28 @@
+@import '../../../styles.scss';
+
 .dashboard {
   &-wrapper {
     height: 100vh;
     background-image: linear-gradient(to bottom, #42acff, #136dbb);
+    padding-bottom: 60px;
+
+    .welcome {
+      width: 70%;
+      color: pal(white);
+      margin-top: 80px;
+    }
   }
+}
+
+.welcome-boxes {
+  margin-top: 55px;
+
+  .cta {
+    @include font(24, heavy);
+    margin: 30px 0;
+  }
+}
+
+.info-box {
+  margin-right: 60px;
 }
