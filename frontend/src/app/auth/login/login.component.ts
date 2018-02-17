@@ -31,8 +31,6 @@ export class LoginComponent implements OnInit {
     });
 
     setTimeout((() => {
-      console.log(this.auth.isTeacher());
-
       if (this.auth.isTeacher()) {
         this.router.navigate(['/teacher']);
       } else {

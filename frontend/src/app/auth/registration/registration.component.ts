@@ -25,7 +25,6 @@ export class RegistrationComponent implements OnInit {
   }
 
   handleSuccessfulSignup() {
-    console.log(this);
     this.toast.addToast({
       title: 'Rejestracja udana',
       msg: 'Za chwilę zostaniesz przekierowany.',
