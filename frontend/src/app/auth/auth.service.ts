@@ -12,6 +12,10 @@ export class AuthService {
     return localStorage.getItem('authToken');
   }
 
+  isLoggedIn(): boolean {
+    return !!this.getToken();
+  }
+
   setToken(token?: string): void {
     if (token) {
       localStorage.setItem('authToken', token);
