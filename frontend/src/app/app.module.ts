@@ -25,7 +25,6 @@ import { TokenInterceptor } from './auth/token.interceptor';
     AppRoutingModule,
     SharedModule,
     StudentModule,
-    StudentModule
   ],
   providers: [
     {
