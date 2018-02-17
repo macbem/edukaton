@@ -1,0 +1,15 @@
+<div class="toast">
+  <div *ngFor="let toast of list"
+       [@flyInOut]="'in'"
+       class="toast__box"
+       (click)="remove(toast)"
+       [class.success]="toast.type === 'success'"
+       [class.error]="toast.type === 'error'"
+       [class.info]="toast.type === 'info'">
+    <p class="toast__title"
+       *ngIf="toast.title">
+      {{toast.title}}
+    </p>
+    <p class="toast__msg">{{toast.msg}}</p>
+  </div>
+</div>
