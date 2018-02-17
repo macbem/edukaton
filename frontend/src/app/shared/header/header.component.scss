@@ -2,8 +2,19 @@
 
 .header {
   color: pal(white);
+  padding-top: 45px;
 }
 
 .brand {
   @include font-weight(bold);
+
+  img {
+    width: 60px;
+    margin-right: 22px;
+  }
+}
+
+img.contact {
+  max-height: 58px;
+  margin-left: 20px;
 }

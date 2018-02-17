@@ -1,12 +1,14 @@
-.edu-heading {
-  //@include font(12, normal)
+.heading {
+
 
   &--hero {
 
   }
 
   &--primary {
-
+    @include font(44, extrabold);
+    line-height: 1.41;
+    margin: 20px 0;
   }
 
   &--secondary {
@@ -14,10 +16,11 @@
   }
 }
 
-.edu-copy {
+.copy {
 
   &--large {
-
+    font-size: 18px;
+    line-height: 1.67;
   }
 
   &--small {
@@ -50,6 +53,10 @@
 
   &--uppercase {
     text-transform: uppercase;
+  }
+
+  &--faded {
+    color: #A5CFF0;
   }
 }
 

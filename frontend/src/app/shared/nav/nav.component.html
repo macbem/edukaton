@@ -1,3 +1,16 @@
-<p>
-  nav works!
-</p>
+<nav class="nav-wrapper">
+  <div class="nav col justify-between">
+    <div class="three col">
+      <div class="hamburger" (click)="active = !active" [class.burgerActive]="active">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <div class="contact col align-center">
+      <img src="/assets/images/edu_facebook.svg" alt="">
+      <img src="/assets/images/edu_twitter.svg" alt="">
+      <img src="/assets/images/edu_mail.svg" alt="">
+    </div>
+  </div>
+</nav>

@@ -1,9 +1,10 @@
 .btn {
   border: none;
   border-radius: 29px;
-  @include font(14, medium);
+  @include font(12, bold);
   color: pal(white);
-  background: pal(white);
+  background-color: #2fc9ff;
+  box-shadow: 0 22px 34px 0 rgba(27, 120, 199, 0.18);
   transition: background-color 0.2s ease;
   height: 58px;
   width: 146px;

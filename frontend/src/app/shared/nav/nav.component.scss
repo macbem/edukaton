@@ -1,0 +1,41 @@
+@import '../../../styles.scss';
+
+.nav {
+  height: inherit;
+  padding: 60px 15px 80px;
+
+  &-wrapper {
+    height: 100vh;
+  }
+
+  img {
+    margin: 10px 0;
+  }
+}
+
+.hamburger .line{
+  width: 18px;
+  height: 2px;
+  background-color: pal(black);
+  display: block;
+  margin: 3px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+.hamburger.burgerActive .line:nth-child(1),
+.hamburger.burgerActive .line:nth-child(3){
+  width: 10px;
+}
+
+.hamburger.burgerActive .line:nth-child(1){
+  transform: translate(6px, 2px) rotate(45deg)
+}
+
+.hamburger.burgerActive .line:nth-child(3){
+  transform: translate(6px, -2px) rotate(-45deg)
+}
