@@ -1,0 +1,9 @@
+@import "../../../styles.scss";
+
+.header {
+  color: pal(white);
+}
+
+.brand {
+  @include font-weight(bold);
+}
