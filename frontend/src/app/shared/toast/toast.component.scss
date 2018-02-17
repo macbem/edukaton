@@ -1,0 +1,64 @@
+$borderBlue: #daedf6;
+
+$moreLightBlue: #f3f9fc;;
+$black: #212426;
+
+$blue: #0097e8;
+$lightBlue: #0099E6;
+
+$gray: #727a7e;
+$lightGray: #dcdedf;
+
+$lightGreen: #e6f9e6;
+$green: #b4e160;
+$darkGreen: #3a773a;
+$red: #ab4340;
+
+$errorBackground: rgba(241, 222, 222, 1);
+$errorBorder: #eccccc;
+
+.toast {
+  position: fixed;
+  right: 10px;
+  top: 50px;
+  z-index: 999999999999;
+
+  background: transparent;
+  min-width: 250px;
+
+  &__box {
+    margin: 10px 0px;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+
+    &.success {
+      background: $lightGreen;
+      border: 1px solid $green;
+      color: $darkGreen;
+    }
+
+    &.error {
+      background: $errorBackground;
+      border: 1px solid $errorBorder;
+      color: $red;
+    }
+
+    &.info {
+      background: $moreLightBlue;
+      border: 1px solid $borderBlue;
+      color: $blue;
+    }
+
+  }
+
+  &__title {
+    margin: 4px;
+    font-size: 14px;
+  }
+
+  &__msg {
+    margin: 4px;
+    font-size: 14px;
+  }
+}

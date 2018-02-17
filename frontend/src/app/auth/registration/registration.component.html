@@ -1,3 +1,30 @@
-<p>
-  registration works!
-</p>
+<toast #toast></toast>
+<div class="registration-wrapper">
+  <div class="container">
+    <app-header></app-header>
+    <div class="welcome">
+      <h1 class="heading heading--primary">
+        Witamy na platformie edukacyjnej
+        Edukaton, która pokaże Ci jakie zagrozenia czekaja w sieci.
+        <br><br>
+        Zarejestruj się i zacznij naukę.
+      </h1>
+      <form (submit)="handleFormSubmit($event)" [formGroup]="form">
+        <input type="text" formControlName="email" placeholder="email">
+        <p *ngIf="form.get('email').touched && form.get('email').invalid">
+          Nieprawidłowy email.
+        </p>
+        <input type="password" formControlName="password" placeholder="hasło">
+        <p *ngIf="form.get('password').touched && form.get('password').invalid">
+          Nieprawidłowe hasło. Hasło musi mieć co najmniej pięć znaków.
+        </p>
+        <label>
+          Jestem nauczycielem
+          <br>
+          <input type="checkbox" formControlName="isTeacher">
+        </label>
+        <button>Zarejestruj się</button>
+      </form>
+    </div>
+  </div>
+</div>
