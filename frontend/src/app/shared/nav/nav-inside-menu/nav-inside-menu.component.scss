@@ -7,12 +7,12 @@
   top: 0;
   left: -280px;
   background: #fff;
-  transition: 0.5s ease;
+  transition: 0.8s ease;
   z-index: 1;
   border-left: 1px solid #edf4fa;
 
   &.active {
-    left: 100px;
+    transform: translateX(380px);
   }
 }
 
