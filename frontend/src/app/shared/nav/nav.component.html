@@ -1,7 +1,7 @@
 <nav class="nav-wrapper">
   <div class="nav col justify-between">
     <div class="three col">
-      <div class="hamburger" (click)="active = !active" [class.burgerActive]="active">
+      <div class="hamburger" (click)="burgerActive = !burgerActive; toggleMenu()" [class.burgerActive]="burgerActive">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
