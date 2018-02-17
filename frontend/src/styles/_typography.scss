@@ -1,18 +1,18 @@
 .heading {
-
+  margin: 20px 0;
 
   &--hero {
-
+    @include font(44, extrabold);
+    line-height: 1.41;
   }
 
   &--primary {
-    @include font(44, extrabold);
-    line-height: 1.41;
-    margin: 20px 0;
+    @include font(24, extrabold);
+    margin: 25px 0;
   }
 
   &--secondary {
-
+    @include font(18, extrabold);
   }
 }
 
@@ -62,4 +62,8 @@
 
 .text-center {
   text-align: center;
+}
+
+.bold {
+  @include font-weight(bold);
 }

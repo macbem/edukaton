@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav/nav.component';
 import { TestComponent } from './test/test.component';
 import { HeaderComponent } from './header/header.component';
+import { ContactComponent } from './contact/contact.component';
+import { NavInsideMenuComponent } from './nav/nav-inside-menu/nav-inside-menu.component';
 
 @NgModule({
   imports: [
@@ -11,11 +13,15 @@ import { HeaderComponent } from './header/header.component';
   declarations: [
     NavComponent,
     TestComponent,
-    HeaderComponent
+    HeaderComponent,
+    ContactComponent,
+    NavInsideMenuComponent
   ],
   exports: [
     NavComponent,
-    HeaderComponent
+    HeaderComponent,
+    ContactComponent,
+    NavInsideMenuComponent
   ]
 })
 export class SharedModule { }

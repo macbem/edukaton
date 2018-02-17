@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -6,7 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  active: false;
+  burgerActive = false;
+  visible = false;
+
+  @Output() toggle: EventEmitter<boolean> = new EventEmitter();
+
+  toggleMenu() {
+    this.visible = !this.visible;
+    this.toggle.emit(this.visible);
+  }
 
   constructor() { }
 
