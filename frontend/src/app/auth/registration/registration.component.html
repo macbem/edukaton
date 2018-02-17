@@ -1,30 +1,49 @@
 <toast #toast></toast>
-<div class="registration-wrapper">
+<div class="login-wrapper">
   <div class="container">
     <app-header></app-header>
-    <div class="welcome">
-      <h1 class="heading heading--primary">
-        Witamy na platformie edukacyjnej
-        Edukaton, która pokaże Ci jakie zagrozenia czekaja w sieci.
-        <br><br>
-        Zarejestruj się i zacznij naukę.
-      </h1>
+  </div>
+  <div class="col justify-center align-center auth">
+    <h1 class="heading heading--hero">Zarejestruj się</h1>
+
+    <div class="auth-box">
       <form (submit)="handleFormSubmit($event)" [formGroup]="form">
-        <input type="text" formControlName="email" placeholder="email">
-        <p *ngIf="form.get('email').touched && form.get('email').invalid">
-          Nieprawidłowy email.
-        </p>
-        <input type="password" formControlName="password" placeholder="hasło">
-        <p *ngIf="form.get('password').touched && form.get('password').invalid">
-          Nieprawidłowe hasło. Hasło musi mieć co najmniej pięć znaków.
-        </p>
-        <label>
-          Jestem nauczycielem
-          <br>
-          <input type="checkbox" formControlName="isTeacher">
-        </label>
-        <button>Zarejestruj się</button>
+        <div class="input-wrapper">
+          <label class="label">Adres email</label>
+          <input class="input" type="text" formControlName="email" placeholder="email">
+          <p class="error" *ngIf="form.get('email').touched && form.get('email').invalid">
+            Nieprawidłowy email.
+          </p>
+        </div>
+
+        <div class="input-wrapper">
+          <label class="label">Hasło</label>
+          <input class="input" type="password" formControlName="password" placeholder="hasło">
+          <p class="error" *ngIf="form.get('password').touched && form.get('password').invalid">
+            Nieprawidłowe hasło. Hasło musi mieć co najmniej pięć znaków.
+          </p>
+        </div>
+
+        <!--<div class="input-wrapper">-->
+          <!--<label class="label">Hasło</label>-->
+          <!--<input class="input" type="password" formControlName="password" placeholder="hasło">-->
+
+          <!--&lt;!&ndash;TODO&ndash;&gt;-->
+          <!--<p class="error" *ngIf="form.get('password').touched && form.get('password').invalid">-->
+            <!--Hasła nie pasują do siebie.-->
+          <!--</p>-->
+        <!--</div>-->
+        <div class="input-wrapper">
+          <div class="row">
+            <input type="checkbox" formControlName="isTeacher">
+            <label class="label label--dark">Jestem nauczycielem</label>
+          </div>
+        </div>
+
+        <button class="auth-action btn btn--block">Zarejestruj się</button>
       </form>
+
+      <p class="change-auth-view copy copy--faded">Nie masz konta? <a routerLink="/login"><span class="">Zaloguj się</span></a></p>
     </div>
   </div>
 </div>

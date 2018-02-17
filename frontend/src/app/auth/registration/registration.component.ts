@@ -30,6 +30,8 @@ export class RegistrationComponent implements OnInit {
       msg: 'Za chwilę zostaniesz przekierowany.',
       type: 'success'
     });
+    debugger;
+
 
     setTimeout((() => {
       if (this.auth.isTeacher()) {

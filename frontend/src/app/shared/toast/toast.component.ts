@@ -15,20 +15,7 @@ interface Toast {
 @Component({
   selector: 'toast',
   templateUrl: './toast.component.html',
-  styleUrls: ['./toast.component.scss'],
-
-  animations: [
-    trigger('flyInOut', [
-      state('in', style({transform: 'translateX(0)'})),
-      transition('void => *', [
-        style({transform: 'translateX(100%)'}),
-        animate(200)
-      ]),
-      transition('* => void', [
-        animate(200, style({transform: 'translateX(-100%)'}))
-      ])
-    ])
-  ]
+  styleUrls: ['./toast.component.scss']
 })
 export class ToastComponent {
   private list: any[] = [];
@@ -42,7 +29,7 @@ export class ToastComponent {
   }
 
   private autoRemove(isError: boolean = false) {
-    const timeout = isError ? 6000 : 3000;
+    const timeout = isError ? 4000 : 2000;
 
     if (this.list.length) {
       setTimeout(() => {

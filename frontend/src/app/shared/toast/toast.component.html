@@ -1,6 +1,5 @@
 <div class="toast">
   <div *ngFor="let toast of list"
-       [@flyInOut]="'in'"
        class="toast__box"
        (click)="remove(toast)"
        [class.success]="toast.type === 'success'"
