@@ -1,0 +1,15 @@
+@import '../../../styles.scss';
+
+.registration {
+  &-wrapper {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #42acff, #136dbb);
+    padding-bottom: 60px;
+
+    .welcome {
+      width: 70%;
+      color: pal(white);
+      margin-top: 80px;
+    }
+  }
+}
