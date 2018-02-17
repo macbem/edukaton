@@ -67,3 +67,6 @@
 .bold {
   @include font-weight(bold);
 }
+.heavy {
+  @include font-weight(heavy);
+}

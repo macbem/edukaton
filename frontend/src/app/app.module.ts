@@ -26,9 +26,6 @@ import { AppComponent } from './app.component';
     AuthModule,
     ApiModule,
     AppRoutingModule,
-    SharedModule,
-    StudentModule,
-    AuthModule,
     StudentModule
   ],
   providers: [

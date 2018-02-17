@@ -3,11 +3,13 @@
   border-radius: 29px;
   @include font(12, bold);
   color: pal(white);
+  padding-left: 40px;
+  padding-right: 40px;
   background-color: #2fc9ff;
   box-shadow: 0 22px 34px 0 rgba(27, 120, 199, 0.18);
   transition: background-color 0.2s ease;
   height: 58px;
-  width: 146px;
+  min-width: 146px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
