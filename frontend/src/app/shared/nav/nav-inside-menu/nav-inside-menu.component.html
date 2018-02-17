@@ -1,0 +1,24 @@
+<div class="nav-menu-wrapper" [class.active]="isMenuActive">
+  <div class="nav-menu col justify-between">
+    <ul class="menu heading heading--secondary bold">
+      <li class="menu-item">Strona główna</li>
+      <li class="menu-item">
+        Poradniki
+        <ul class="submenu">
+          <li class="submenu-item">Wprowadzenie</li>
+          <li class="submenu-item">Fake News</li>
+        </ul>
+      </li>
+      <li class="menu-item">Rozpocznij Test Wiedzy</li>
+      <li class="menu-item">Panel Nauczyciela</li>
+    </ul>
+
+    <div class="login-box" *ngIf="!isLoggedIn">
+      <div class="col align-center justify-center">
+        <img src="" alt="">
+        <p class="heading heading--secondary">Zaloguj się, aby śledzic swoje wyniki</p>
+        <button class="btn">Zaloguj się</button>
+      </div>
+    </div>
+  </div>
+</div>
