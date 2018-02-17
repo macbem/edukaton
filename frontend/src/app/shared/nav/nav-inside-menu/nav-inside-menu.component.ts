@@ -16,7 +16,7 @@ export class NavInsideMenuComponent implements OnInit {
     this.isLoggedIn = this.authService.isLoggedIn();
   }
 
-  toggleMenu(state) {
+  toggleNavMenu(state) {
     this.isMenuActive = state;
   }
 

@@ -1,26 +1,8 @@
-$borderBlue: #daedf6;
-
-$moreLightBlue: #f3f9fc;;
-$black: #212426;
-
-$blue: #0097e8;
-$lightBlue: #0099E6;
-
-$gray: #727a7e;
-$lightGray: #dcdedf;
-
-$lightGreen: #e6f9e6;
-$green: #b4e160;
-$darkGreen: #3a773a;
-$red: #ab4340;
-
-$errorBackground: rgba(241, 222, 222, 1);
-$errorBorder: #eccccc;
-
 .toast {
   position: fixed;
-  right: 10px;
-  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
   z-index: 999999999999;
 
   background: transparent;
@@ -33,23 +15,16 @@ $errorBorder: #eccccc;
     cursor: pointer;
 
     &.success {
-      background: $lightGreen;
-      border: 1px solid $green;
-      color: $darkGreen;
+      background: white;
+      border: 1px solid white;
+      color: black;
     }
 
     &.error {
-      background: $errorBackground;
-      border: 1px solid $errorBorder;
-      color: $red;
+      background: red;
+      border: 1px solid darkred;
+      color: white;
     }
-
-    &.info {
-      background: $moreLightBlue;
-      border: 1px solid $borderBlue;
-      color: $blue;
-    }
-
   }
 
   &__title {

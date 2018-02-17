@@ -1,7 +1,7 @@
 <div class="app row">
-  <app-nav-inside-menu #menu></app-nav-inside-menu>
+  <app-nav-inside-menu #menu *ngIf="!isRouteLogin"></app-nav-inside-menu>
 
-  <app-nav class="nav" (toggle)="menu.toggleMenu($event)"></app-nav>
+  <app-nav class="nav" (toggle)="menu.toggleNavMenu($event)" *ngIf="!isRouteLogin"></app-nav>
   <div [@fadeAnimation]="getRouterOutletState(o)" class="main">
     <router-outlet #o="outlet"></router-outlet>
   </div>

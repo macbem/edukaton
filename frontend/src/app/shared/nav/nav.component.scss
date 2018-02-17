@@ -33,9 +33,9 @@
 }
 
 .hamburger.burgerActive .line:nth-child(1){
-  transform: translate(6px, 2px) rotate(45deg)
+  transform: translate(-6px, 2px) rotate(-45deg)
 }
 
 .hamburger.burgerActive .line:nth-child(3){
-  transform: translate(6px, -2px) rotate(-45deg)
+  transform: translate(-6px, -2px) rotate(45deg)
 }
