@@ -1,2 +1,2 @@
-export interface Auth.Interface.Ts {
+export interface AuthInterface {
 }
