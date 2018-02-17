@@ -5,3 +5,29 @@
 .hidden {
   display: none;
 }
+
+.box {
+  padding: 16px 20px;
+  background: pal(white);
+  color: pal(black);
+  border-radius: 10px;
+
+  &--faded {
+    background: rgba(255, 255, 255, 0.1);
+    color: pal(white);
+  }
+
+  &--big {
+    padding: 30px;
+    margin: 20px 0;
+  }
+
+  &--large {
+    padding: 40px 50px;
+    margin: 30px 0;
+  }
+
+  &--short {
+    max-width: 700px;
+  }
+}

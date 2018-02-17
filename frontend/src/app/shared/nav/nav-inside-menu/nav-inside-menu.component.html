@@ -1,7 +1,9 @@
 <div class="nav-menu-wrapper" [class.active]="isMenuActive">
   <div class="nav-menu col justify-between">
     <ul class="menu heading heading--secondary bold">
-      <li class="menu-item">Strona główna</li>
+      <a routerLink="/dashboard" (click)="isMenuActive = false">
+        <li class="menu-item">Strona główna</li>
+      </a>
       <li class="menu-item">
         Poradniki
         <ul class="submenu">

@@ -17,6 +17,12 @@
 }
 
 .copy {
+  color: pal(copy, on-light);
+  margin: 15px 0;
+
+  &--white {
+    color: pal(white);
+  }
 
   &--large {
     font-size: 18px;
@@ -57,6 +63,10 @@
 
   &--faded {
     color: #c2d7e7;
+  }
+
+  &--on-dark {
+    color: pal(copy, on-dark)
   }
 }
 
