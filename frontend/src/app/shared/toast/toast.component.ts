@@ -29,7 +29,6 @@ interface Toast {
       ])
     ])
   ]
-
 })
 export class ToastComponent {
   private list: any[] = [];
