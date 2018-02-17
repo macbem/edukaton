@@ -5,7 +5,7 @@ import { ToastComponent } from '../../shared/toast/toast.component';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss']
 })
