@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
+import { AuthService } from '../../auth/auth.service';
+import 'rxjs/add/observable/timer';
 
 @Component({
   selector: 'app-header',
@@ -9,13 +10,13 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isLoginPage: Observable<boolean>;
+  isLoggedIn: Observable<boolean>;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private auth: AuthService) { }
 
   ngOnInit() {
-    this.isLoginPage = this.route.url.pipe(
-      map(urlSegment => urlSegment[0].path === 'login'),
+    this.isLoggedIn = Observable.timer(0, 5000).pipe(
+      map(() => this.auth.isLoggedIn())
     );
   }
 }

@@ -4,7 +4,7 @@
       <img src="/assets/images/logo_cloud.png" alt="">
       <span>Clear Media</span>
     </div>
-    <div class="row align-center login-and-info" [class.hidden]="isLoginPage | async">
+    <div class="row align-center login-and-info" [class.hidden]="isLoggedIn | async">
       <button class="btn btn--semi-transparent" [routerLink]="['/login']">Zaloguj się</button>
       <img class="contact" src="/assets/images/contact_options.png" alt="">
     </div>
