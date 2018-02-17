@@ -14,8 +14,8 @@ interface Toast {
 
 @Component({
   selector: 'toast',
-  template: require('./toast.component.html'),
-  styles: [require('./toast.component.scss')],
+  templateUrl: './toast.component.html',
+  styleUrls: ['./toast.component.scss'],
 
   animations: [
     trigger('flyInOut', [

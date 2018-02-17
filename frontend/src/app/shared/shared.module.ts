@@ -5,6 +5,8 @@ import { TestComponent } from './test/test.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { ToastComponent } from './toast/toast.component';
+import { ContactComponent } from './contact/contact.component';
+import { NavInsideMenuComponent } from './nav/nav-inside-menu/nav-inside-menu.component';
 
 @NgModule({
   imports: [
@@ -15,12 +17,16 @@ import { ToastComponent } from './toast/toast.component';
     NavComponent,
     TestComponent,
     HeaderComponent,
-    ToastComponent
+    ToastComponent,
+    ContactComponent,
+    NavInsideMenuComponent
   ],
   exports: [
     NavComponent,
     HeaderComponent,
-    ToastComponent
+    ToastComponent,
+    ContactComponent,
+    NavInsideMenuComponent
   ]
 })
 export class SharedModule { }

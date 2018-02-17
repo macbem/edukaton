@@ -1,0 +1,45 @@
+@import '../../../../styles.scss';
+
+.nav-menu-wrapper {
+  height: 100vh;
+  position: fixed;
+  width: 380px;
+  top: 0;
+  left: -280px;
+  background: #fff;
+  transition: 0.5s ease;
+  z-index: 1;
+  border-left: 1px solid #edf4fa;
+
+  &.active {
+    left: 100px;
+  }
+}
+
+.nav-menu {
+  padding: 40px 40px 70px;
+  height: inherit;
+}
+
+.menu {
+
+  &-item {
+    margin: 0 0 60px;
+  }
+
+  .submenu {
+    margin-left: 30px;
+    @include font(14, bold);
+    color: #A5CFF0;
+    margin-bottom: 90px;
+
+    &-item {
+      margin: 40px 0;
+    }
+  }
+}
+
+.login-box {
+  background-color: #e9f5fe;
+  padding: 20px 30px 30px;
+}
