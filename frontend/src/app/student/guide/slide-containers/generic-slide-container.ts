@@ -9,7 +9,7 @@ export interface GenericSlideContainer {
 }
 
 export abstract class GenericSlideContainerClass {
-  public currentSlideId = 0;
+  public currentSlideId = 1;
   public slidesCount = 2;
 
   next() {
@@ -34,6 +34,6 @@ export abstract class GenericSlideContainerClass {
   }
 
   isLastSlide() {
-    return this.currentSlideId === this.slidesCount - 1;
+    return this.currentSlideId === this.slidesCount;
   }
 }

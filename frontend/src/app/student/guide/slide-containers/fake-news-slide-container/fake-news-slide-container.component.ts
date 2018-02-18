@@ -9,15 +9,21 @@ import { IHighlightPoint } from '../../slides/highlights-slide/highlights-slide.
   styleUrls: ['./fake-news-slide-container.component.scss']
 })
 export class FakeNewsSlideContainerComponent extends GenericSlideContainerClass implements GenericSlideContainer {
-  public currentSlideId = 0;
-  public slidesCount = 3;
+  public slidesCount = 4;
   public highlights: IHighlightPoint[] = [
     {
-      offsetLeftPercentage: 80,
-      offsetTopPercentage: 80,
+      offsetLeftPercentage: 20,
+      offsetTopPercentage: 40,
       height: 20,
       width: 30,
-      title: 'sda',
+      title: 'First',
+    },
+    {
+      offsetLeftPercentage: 10,
+      offsetTopPercentage: 10,
+      height: 40,
+      width: 80,
+      title: 'Second',
     }
   ];
 
