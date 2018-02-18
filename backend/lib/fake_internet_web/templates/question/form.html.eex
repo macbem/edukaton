@@ -1,0 +1,57 @@
+<%= form_for @changeset, @action, [multipart: true], fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :question, class: "control-label" %>
+    <%= textarea f, :question, class: "form-control" %>
+    <%= error_tag f, :question %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :category_id, class: "control-label" %>
+    <%= select f,
+      :category_id,
+      Enum.map(@categories, &{&1.title, &1.id}),
+      class: "form-control"
+    %>
+    <%= error_tag f, :category_id %>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label">Image</label>
+    <div>
+      <%= img_tag FakeInternet.QuestionImage.url({
+        @changeset.data.image,
+        @changeset.data
+      })%>
+      <%= file_input f, :image %>
+    </div>
+  </div>
+
+  <div style="padding: 10px 20px;">
+    <%= inputs_for f, :answers, fn p -> %>
+      <div class="form-group">
+        <%= label p, :label, class: "control-label" %>
+
+        <div class="input-group">
+          <%= text_input p, :label, class: "form-control" %>
+          <div class="input-group-addon">
+            <%= label p, :is_correct, class: "control-label" do %>
+              <%= checkbox p, :is_correct %> is correct?
+            <% end %>
+          </div>
+        </div>
+
+        <%= error_tag p, :label %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

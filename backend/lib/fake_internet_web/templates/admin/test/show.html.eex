@@ -1,0 +1,87 @@
+<h2>Show Test</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @test.name %>
+  </li>
+
+</ul>
+
+<table class="table">
+  <tr>
+    <th>id</th>
+    <th>user</th>
+    <th></th>
+  </tr>
+<%= for submission <- @test.submissions do %>
+  <%
+    # WTF is this :D
+    questions =
+      Enum.filter(@questions, fn q -> Enum.member?(@test.question_ids, q.id) end)
+      |> Enum.map(fn question ->
+        Map.merge(question, %{
+          submission_answers: Enum.map(question.answers, fn a ->
+            user_answer = Enum.find(submission.answers, fn sa -> sa.answer_id == a.id end)
+
+            cond do
+              a.is_correct && !user_answer -> false
+              !a.is_correct && user_answer -> false
+              true -> true
+            end
+          end) |> Enum.filter(fn a -> a end)
+        })
+      end)
+      |> Enum.map(fn question ->
+        Map.merge(question, %{
+          submission_correct: length(question.submission_answers) == length(question.answers)
+        })
+      end)
+
+    correct_questions_counts = length(Enum.filter(questions, fn q -> q.submission_correct end))
+  %>
+  <tr>
+    <td><%= submission.id %></td>
+    <td><%= FakeInternet.Accounts.get_user!(submission.user_id).email %></td>
+    <td>
+      <table class="table">
+        <tr>
+          <th>Question</th>
+          <th>Correct</th>
+        </tr>
+
+        <%= for question <- questions do %>
+          <%
+            answers = Enum.map(question.answers, fn a ->
+              user_answer = Enum.find(submission.answers, fn sa -> sa.answer_id == a.id end)
+
+              cond do
+                a.is_correct && !user_answer -> false
+                !a.is_correct && user_answer -> false
+                true -> true
+              end
+            end)
+          %>
+
+          <tr>
+            <td><%= question.question %></td>
+            <td>
+              <%= for i <- answers do %>
+                <%= i %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+        <tr>
+          <td><b>Score</b></td>
+          <td><%= correct_questions_counts %>/<%= length(questions) %></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<span><%= link "Edit", to: test_path(@conn, :edit, @test) %></span>
+<span><%= link "Back", to: test_path(@conn, :index) %></span>
