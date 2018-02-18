@@ -4,7 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FakenewsIntroComponent } from './guide/intro/fakenews-intro/fakenews-intro.component';
 import { TutorialContainerComponent } from './guide/tutorial-container/tutorial-container.component';
 import { FakeNewsSlideContainerComponent } from './guide/slide-containers/fake-news-slide-container/fake-news-slide-container.component';
-import {SocialmediaIntroComponent} from "./guide/intro/socialmedia-intro/socialmedia-intro.component";
+import { SocialmediaIntroComponent } from "./guide/intro/socialmedia-intro/socialmedia-intro.component";
 
 const studentRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent },

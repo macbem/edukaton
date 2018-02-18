@@ -46,3 +46,21 @@
 .example {
   margin-left: 50px;
 }
+
+.tutorial-content {
+
+  p {
+    @include font (18, bold);
+    line-height: 1.44;
+    color: #072035;
+    margin: 35px 0;
+  }
+}
+
+.tutorial-navigation-steps {
+  margin-left: 50px;
+
+  .arrows {
+    margin-left: 20px;
+  }
+}
