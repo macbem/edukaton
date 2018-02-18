@@ -56,15 +56,15 @@ export class HighlightsSlideComponent implements OnInit, OnDestroy {
       intro: el.title,
       element: this.elementRef.nativeElement.querySelector(`[data-intro-el="${ el.selector }"]`),
     }));
-    console.log(this.elementRef.nativeElement.querySelector('[data-intro-el="0"]'));
-    console.log(output);
     return output;
   }
 
   initHighlights() {
     this.introJsInstance = intro.introJs();
     this.introJsInstance.setOptions({
-      steps: this.prepareIntroJsInput(this.highlights)
+      steps: this.prepareIntroJsInput(this.highlights),
+      exitOnOverlayClick: false,
+      hidePrev: true
     });
 
     const exitHandler = (() => {
@@ -73,8 +73,6 @@ export class HighlightsSlideComponent implements OnInit, OnDestroy {
         this.introJsEnd.emit();
       }
     }).bind(this);
-
-    console.log(this.introJsInstance);
 
     this.introJsInstance.onexit(exitHandler);
     this.introJsInstance.oncomplete(exitHandler);
