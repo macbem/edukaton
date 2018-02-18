@@ -91,6 +91,7 @@ $app-theme:   mat-light-theme($app-primary, $app-accent);
 
     &-checkbox {
       margin: 0 40px 0 0;
+      flex-shrink: 0;
       width: 34px;
       height: 34px;
       border-radius: 100%;
