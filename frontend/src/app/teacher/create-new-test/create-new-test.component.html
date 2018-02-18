@@ -1,0 +1,26 @@
+<div class="dashboard-wrapper white" style="overflow-y: scroll">
+  <div class="container">
+    <app-header></app-header>
+    <div class="welcome">
+      <h1 class="heading heading--hero">
+        Stwórz nowy test
+      </h1>
+      <h2 class="copy copy--large copy--faded">
+        It is a long established fact that a reader will be distracted by the readable
+        content of a page when looking at its layout. The point of using
+      </h2>
+    </div>
+
+    <div class="questions">
+      <h3 class="heading heading--secondary">Pytania z kategorii Fake News</h3>
+      <app-question *ngFor="let result of [1,2,3,4,5]; index as i" [index]="i"></app-question>
+    </div>
+
+    <div class="questions">
+      <h3 class="heading heading--secondary">Pytania z kategorii Social Media</h3>
+      <app-question *ngFor="let result of [1,2,3,4,5]; index as i" [index]="i"></app-question>
+    </div>
+
+    <button class="btn btn--white" (click)="saveTest()">Stwórz test</button>
+  </div>
+</div>

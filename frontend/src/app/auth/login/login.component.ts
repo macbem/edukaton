@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
-import { ToastComponent } from '../../shared/toast/toast.component';
 import { Router } from '@angular/router';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'app-login',
@@ -11,10 +11,9 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   @ViewChild('toast')
-  public toast: ToastComponent;
   public form: FormGroup;
 
-  constructor(private auth: AuthService, private router: Router) { }
+  constructor(private auth: AuthService, private router: Router, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -24,12 +23,9 @@ export class LoginComponent implements OnInit {
   }
 
   handleSuccessfulLogin() {
-    this.toast.addToast({
-      title: 'Logowanie udane',
-      msg: 'Za chwilę zostaniesz przekierowany',
-      type: 'success'
+    this.snackBar.open('Logowanie udane, za chwilę zostaniesz przekierowany.', 'Zamknij', {
+      duration: 2000,
     });
-    debugger;
 
     setTimeout((() => {
       if (this.auth.isTeacher()) {
@@ -37,14 +33,12 @@ export class LoginComponent implements OnInit {
       } else {
         this.router.navigate(['/dashboard']);
       }
-    }).bind(this), 3000);
+    }).bind(this), 2000);
   }
 
   handleUnsuccessfulLogin() {
-    this.toast.addToast({
-      title: 'Logowanie nieudane.',
-      msg: 'Sprawdź czy dane do logowania są prawidłowe i spróbuj ponownie.',
-      type: 'error'
+    this.snackBar.open('Logowanie nieudane. Sprawdź czy dobrze wprowadziłeś dane.', 'Zamknij', {
+      duration: 2000,
     });
   }
 

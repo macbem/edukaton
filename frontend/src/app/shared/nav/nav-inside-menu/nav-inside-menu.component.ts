@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {AuthService} from "../../../auth/auth.service";
 
 @Component({
@@ -7,7 +7,9 @@ import {AuthService} from "../../../auth/auth.service";
   styleUrls: ['./nav-inside-menu.component.scss']
 })
 export class NavInsideMenuComponent implements OnInit {
-  isMenuActive = false;
+  @Input('menuVisible') menuVisible: boolean;
+  @Output() onLinkClick: EventEmitter<boolean> = new EventEmitter();
+
   isLoggedIn: boolean;
 
   constructor(private authService: AuthService) { }
@@ -17,7 +19,12 @@ export class NavInsideMenuComponent implements OnInit {
   }
 
   toggleNavMenu(state) {
-    this.isMenuActive = state;
+    this.menuVisible = state;
+  }
+
+  hideMenu() {
+    this.menuVisible = false;
+    this.onLinkClick.emit(this.menuVisible);
   }
 
 }

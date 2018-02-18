@@ -1,0 +1,29 @@
+@import '../../../styles.scss';
+
+.question-wrapper {
+  margin: 20px 0;
+  position: relative;
+
+  .btn {
+    position: absolute;
+    @include center(vertical);
+    right: 40px;
+  }
+
+  &.checked {
+    border: 2px solid #136dbb;
+  }
+}
+
+.answers {
+  margin-top: 15px;
+
+  .answer {
+    @include font(15);
+    padding: 5px 0;
+
+    &--valid {
+      @include font-weight(extrabold);
+    }
+  }
+}

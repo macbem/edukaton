@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FakenewsIntroComponent } from './guide/intro/fakenews-intro/fakenews-intro.component';
 import { TutorialContainerComponent } from './guide/tutorial-container/tutorial-container.component';
 import { FakeNewsSlideContainerComponent } from './guide/slide-containers/fake-news-slide-container/fake-news-slide-container.component';
+import { SocialmediaIntroComponent } from "./guide/intro/socialmedia-intro/socialmedia-intro.component";
 
 const studentRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -13,8 +14,8 @@ const studentRoutes: Routes = [
     children: [
       { path: '1', component: FakenewsIntroComponent },
       { path: '1/slides', component: FakeNewsSlideContainerComponent },
-      // { path: '2', component: SocialMediaIntroComponent },
-      // { path: '2/slides', component: SocialMediaSlidesComponent },
+      { path: '2', component: SocialmediaIntroComponent },
+      { path: '2/slides', component: FakeNewsSlideContainerComponent },
       { path: '', redirectTo: '1', pathMatch: 'full' },
       { path: '**', redirectTo: '1', pathMatch: 'full' }
     ]

@@ -17,7 +17,7 @@
 
 .label {
   font-size: 12px !important;
-  @include font-weight(extrabold);
+  @include font-weight(bold);
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #c1d7e8;
@@ -51,7 +51,7 @@ button.auth-action {
 }
 
 .change-auth-view {
-  margin-top: 70px;
+  margin-top: 70px !important;
   @include font(14, bold);
 }
 

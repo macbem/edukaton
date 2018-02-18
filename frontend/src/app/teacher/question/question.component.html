@@ -1,0 +1,14 @@
+<div class="question-wrapper">
+  <div class="box box--big">
+    <p class="question">This is question {{ index + 1 }}. Are you ready?</p>
+    <ul class="answers">
+      <li class="answer">A) Answer 1</li>
+      <li class="answer answer--valid">B) Answer 2</li>
+      <li class="answer answer--valid">C) Answer 3</li>
+      <li class="answer">D) Answer 4</li>
+    </ul>
+  </div>
+
+  <button *ngIf="!isAdded" class="btn" (click)="addToTest()">Dodaj</button>
+  <button *ngIf="isAdded" class="btn btn--outline" (click)="removeFromTest()">Usuń</button>
+</div>

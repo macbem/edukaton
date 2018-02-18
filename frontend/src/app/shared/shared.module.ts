@@ -8,10 +8,14 @@ import { ToastComponent } from './toast/toast.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavInsideMenuComponent } from './nav/nav-inside-menu/nav-inside-menu.component';
 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBar } from "@angular/material";
+
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
+    MatSnackBarModule
   ],
   declarations: [
     NavComponent,
