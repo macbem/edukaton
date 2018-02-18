@@ -17,6 +17,7 @@ import { HighlightsSlideComponent } from './guide/slides/highlights-slide/highli
 import { SocialmediaIntroComponent } from './guide/intro/socialmedia-intro/socialmedia-intro.component';
 import { SocialMediaSlideContainerComponent } from './guide/slide-containers/social-media-slide-container/social-media-slide-container.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SummaryComponent } from "./guide/summary/summary.component";
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FakeNewsSlideContainerComponent,
     HighlightsSlideComponent,
     SocialmediaIntroComponent,
-    SocialMediaSlideContainerComponent
+    SocialMediaSlideContainerComponent,
+    SummaryComponent
   ],
   exports: [
     TestComponent,
