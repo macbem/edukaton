@@ -11,6 +11,5 @@ export interface ICategory {
   styleUrls: ['./tutorial-nav.component.scss']
 })
 export class TutorialNavComponent {
-  @Input() categories: ICategory[];
   @Input() stepName: string;
 }
