@@ -12,4 +12,5 @@ export interface ICategory {
 })
 export class TutorialNavComponent {
   @Input() categories: ICategory[];
+  @Input() stepName: string;
 }

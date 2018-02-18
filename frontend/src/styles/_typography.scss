@@ -2,13 +2,21 @@
   margin: 20px 0;
 
   &--hero {
-    @include font(44, extrabold);
+    @include font(30, extrabold);
     line-height: 1.41;
+
+    @include media(xl-up) {
+      @include font(44, extrabold);
+    }
   }
 
   &--primary {
-    @include font(24, extrabold);
+    @include font(22, extrabold);
     margin: 25px 0;
+
+    @include media(xl-up) {
+      @include font(24, extrabold);
+    }
   }
 
   &--secondary {
@@ -16,7 +24,7 @@
   }
 
   &--faded {
-    color: #c2d7e7;
+    color: pal(blue, faded);
   }
 }
 
@@ -66,7 +74,7 @@
   }
 
   &--faded {
-    color: #c2d7e7;
+    color: pal(blue, faded);
   }
 
   &--on-dark {
