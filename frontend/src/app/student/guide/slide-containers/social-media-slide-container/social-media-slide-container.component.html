@@ -1,0 +1,30 @@
+<div class="dashboard-wrapper" style="overflow-y: scroll">
+  <div class="container">
+    <app-header></app-header>
+
+    <app-tutorial-nav [categories]="categories" [stepName]="'social'"></app-tutorial-nav>
+
+    <div class="welcome">
+      <h1 class="heading heading--hero white">
+        Zagrożenia w social media i na platformach gier
+      </h1>
+    </div>
+
+    <ng-container *ngIf="currentSlideId === 1">
+      <app-highlights-slide style="display: block;"
+                            [imageSrc]="'/assets/images/instagram1.png'"
+                            [highlights]="highlights1"
+                            (introJsEnd)="next()"
+      ></app-highlights-slide>
+    </ng-container>
+
+    <ng-container *ngIf="currentSlideId === 2">
+      <app-highlights-slide style="display: block;"
+                            [imageSrc]="'/assets/images/steam1.png'"
+                            [highlights]="highlights2"
+                            (introJsEnd)="next()"
+      ></app-highlights-slide>
+    </ng-container>
+
+  </div>
+</div>
