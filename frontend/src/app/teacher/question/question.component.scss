@@ -19,11 +19,11 @@
   margin-top: 15px;
 
   .answer {
-    @include font(14, bold);
+    @include font(15);
     padding: 5px 0;
 
     &--valid {
-      @include font-weight(heavy);
+      @include font-weight(extrabold);
     }
   }
 }
