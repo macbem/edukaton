@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
-import { ToastComponent } from '../../shared/toast/toast.component';
 import { Router } from '@angular/router';
+import {MatSnackBar} from "@angular/material";
 
 @Component({
   selector: 'app-registration',
@@ -11,10 +11,9 @@ import { Router } from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
   @ViewChild('toast')
-  public toast: ToastComponent;
   public form: FormGroup;
 
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(private auth: AuthService, private router: Router, public snackBar: MatSnackBar) {}
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -25,13 +24,9 @@ export class RegistrationComponent implements OnInit {
   }
 
   handleSuccessfulSignup() {
-    this.toast.addToast({
-      title: 'Rejestracja udana',
-      msg: 'Za chwilę zostaniesz przekierowany.',
-      type: 'success'
+    this.snackBar.open('Rejestracja udane, za chwilę zostaniesz przekierowany.', 'Zamknij', {
+      duration: 2000,
     });
-    debugger;
-
 
     setTimeout((() => {
       if (this.auth.isTeacher()) {
@@ -39,14 +34,12 @@ export class RegistrationComponent implements OnInit {
       } else {
         this.router.navigate(['/dashboard']);
       }
-    }).bind(this), 3000);
+    }).bind(this), 2000);
   }
 
   handleUnsuccessfulSignup() {
-    this.toast.addToast({
-      title: 'Rejestracja nieudana.',
-      msg: 'Sprawdź czy dane do logowania są prawidłowe oraz czy nie wykorzystałeś już tego maila i spróbuj ponownie.',
-      type: 'error'
+    this.snackBar.open('Rejestracja nieudana. Sprawdź czy dobrze wprowadziłeś dane.', 'Zamknij', {
+      duration: 2000,
     });
   }
 

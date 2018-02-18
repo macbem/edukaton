@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'app-create-new-test',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateNewTestComponent implements OnInit {
 
-  constructor() { }
+  constructor(public snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
-
 }
