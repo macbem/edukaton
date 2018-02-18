@@ -6,7 +6,7 @@ import { TutorialContainerComponent } from './guide/tutorial-container/tutorial-
 import { FakeNewsSlideContainerComponent } from './guide/slide-containers/fake-news-slide-container/fake-news-slide-container.component';
 import { SocialmediaIntroComponent } from "./guide/intro/socialmedia-intro/socialmedia-intro.component";
 import {SummaryComponent} from "./guide/summary/summary.component";
-// import {SocialMediaSlideContainerComponent} from "./guide/slide-containers/social-media-slide-container/social-media-slide-container.component";
+import {SocialMediaSlideContainerComponent} from "./guide/slide-containers/social-media-slide-container/social-media-slide-container.component";
 import { TestComponent } from './test/test.component';
 import { TestResolver } from '../api/resolvers/test.resolver';
 
@@ -18,8 +18,8 @@ const studentRoutes: Routes = [
     children: [
       { path: '1', component: FakenewsIntroComponent },
       { path: '1/slides', component: FakeNewsSlideContainerComponent },
-      // { path: '2', component: SocialmediaIntroComponent },
-      // { path: '2/slides', component: SocialMediaSlideContainerComponent },
+      { path: '2', component: SocialmediaIntroComponent },
+      { path: '2/slides', component: SocialMediaSlideContainerComponent },
       { path: 'summary', component: SummaryComponent },
       { path: '', redirectTo: '1', pathMatch: 'full' },
       { path: '**', redirectTo: '1', pathMatch: 'full' }
