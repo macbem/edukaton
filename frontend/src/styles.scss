@@ -22,3 +22,94 @@ $app-theme:   mat-light-theme($app-primary, $app-accent);
 @import 'styles/z-index';
 
 @import 'styles/common';
+
+
+// TODO:
+// Review by @bartek and add colors/commons
+.test-question-header {
+  margin-bottom: 87px;
+  display: flex;
+
+  .welcome {
+    margin-right: auto;
+  }
+
+  &__next-btn {
+    margin-top: 106px;
+    font-family: "Nunito-ExtraBold", sans-serif;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    width: 206px;
+    flex-shrink: 0;
+    margin-left: 40px;
+    height: 58px;
+    background: #2fc9ff;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+
+    &[disabled] {
+      cursor: default;
+      opacity: 0.6;
+    }
+  }
+}
+
+.test-answer-select {
+  overflow: hidden;
+  margin-bottom: 68px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 31px;
+
+  &__item-container {
+    float: left;
+    width: 50%;
+    padding: 15px;
+  }
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 22px 34px 0 rgba(27, 120, 199, 0.13);
+    padding: 10px 76px 10px 45px;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 165px;
+    user-select: none;
+
+    input[type="checkbox"] {
+      visibility: hidden;
+    }
+
+    &-checkbox {
+      margin: 0 40px 0 0;
+      width: 34px;
+      height: 34px;
+      border-radius: 100%;
+      box-shadow: 0 22px 34px 0 rgba(27, 120, 199, 0.13);
+    }
+
+    input[type="checkbox"]:checked + &-checkbox {
+      background: #2fc9ff;
+      position: relative;
+
+      &:before {
+        display: block;
+        content: '';
+        width: 15px;
+        height: 11px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url(/assets/images/checkmark-white.svg);
+        background-size: cover;
+      }
+    }
+  }
+}

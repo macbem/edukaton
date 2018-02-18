@@ -26,6 +26,10 @@
   &--faded {
     color: pal(blue, faded);
   }
+
+  &--white {
+    color: pal(white);
+  }
 }
 
 .copy {
