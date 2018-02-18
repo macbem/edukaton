@@ -30,7 +30,7 @@ export abstract class GenericSlideContainerClass {
   }
 
   isFirstSlide() {
-    return this.currentSlideId === 0;
+    return this.currentSlideId === 1;
   }
 
   isLastSlide() {
