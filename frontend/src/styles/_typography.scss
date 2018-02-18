@@ -80,3 +80,6 @@
 .heavy {
   @include font-weight(heavy);
 }
+.white {
+  color: pal(white);
+}

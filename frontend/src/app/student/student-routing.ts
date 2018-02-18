@@ -11,10 +11,12 @@ const studentRoutes: Routes = [
     path: 'tutorial',
     component: TutorialContainerComponent,
     children: [
+      { path: '1', component: FakenewsIntroComponent },
       { path: '1/slides', component: FakeNewsSlideContainerComponent },
       // { path: '2', component: SocialMediaIntroComponent },
       // { path: '2/slides', component: SocialMediaSlidesComponent },
-      { path: '', redirectTo: '1', pathMatch: 'full' }
+      { path: '', redirectTo: '1', pathMatch: 'full' },
+      { path: '**', redirectTo: '1', pathMatch: 'full' }
     ]
   }
 ];
