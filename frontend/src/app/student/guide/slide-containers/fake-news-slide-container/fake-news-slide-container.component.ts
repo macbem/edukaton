@@ -13,8 +13,8 @@ export class FakeNewsSlideContainerComponent extends GenericSlideContainerClass 
   public slidesCount = 3;
   public highlights: IHighlightPoint[] = [
     {
-      offsetLeftPercentage: 0,
-      offsetTopPercentage: 0,
+      offsetLeftPercentage: 80,
+      offsetTopPercentage: 80,
       height: 20,
       width: 30,
       title: 'sda',

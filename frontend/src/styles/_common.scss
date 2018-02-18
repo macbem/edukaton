@@ -36,7 +36,7 @@
   background-color: pal(white);
   width: 58px;
   height: 58px;
-  margin: 10px;
+  margin: 3px;
   display: inline-block;
   border-radius: 50%;
   position: relative;
@@ -54,7 +54,7 @@
       height: 13px;
       border-style: solid;
       border-color: pal(gray);
-      border-width: 2px 2px 0 0;
+      border-width: 3px 3px 0 0;
       position: absolute;
     }
 
@@ -69,13 +69,17 @@
       transform: rotate(45deg);
       margin: -15px 0 0 -20px;
       top: 34px;
-      left: 34px;
+      left: 38px;
     }
 
-    &--active {
+    &.active {
       &:before {
         border-color: pal(black);
       }
     }
   }
+}
+
+.welcome {
+  margin-top: 70px;
 }

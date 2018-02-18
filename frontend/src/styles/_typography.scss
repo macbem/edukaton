@@ -14,6 +14,10 @@
   &--secondary {
     @include font(18, extrabold);
   }
+
+  &--faded {
+    color: #c2d7e7;
+  }
 }
 
 .copy {
@@ -79,4 +83,7 @@
 }
 .heavy {
   @include font-weight(heavy);
+}
+.white {
+  color: pal(white);
 }
