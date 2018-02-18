@@ -6,7 +6,6 @@ import { SharedModule } from '../shared/shared.module';
 
 import { TestComponent } from './test/test.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SummaryComponent } from './guide/summary/summary.component';
 import { FakenewsIntroComponent } from './guide/intro/fakenews-intro/fakenews-intro.component';
 import { FakenewsSlidesComponent } from './guide/slides/fakenews-slides/fakenews-slides.component';
 import { CardComponent } from './guide/card/card.component';
@@ -17,10 +16,13 @@ import { FakeNewsSlideContainerComponent } from './guide/slide-containers/fake-n
 import { HighlightsSlideComponent } from './guide/slides/highlights-slide/highlights-slide.component';
 import { SocialmediaIntroComponent } from './guide/intro/socialmedia-intro/socialmedia-intro.component';
 import { SocialMediaSlideContainerComponent } from './guide/slide-containers/social-media-slide-container/social-media-slide-container.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule,
     SharedModule,
     StudentRoutingModule,
@@ -28,7 +30,6 @@ import { SocialMediaSlideContainerComponent } from './guide/slide-containers/soc
   declarations: [
     TestComponent,
     DashboardComponent,
-    SummaryComponent,
     FakenewsIntroComponent,
     FakenewsSlidesComponent,
     CardComponent,
@@ -42,7 +43,6 @@ import { SocialMediaSlideContainerComponent } from './guide/slide-containers/soc
   exports: [
     TestComponent,
     DashboardComponent,
-    SummaryComponent,
     FakenewsIntroComponent,
     FakenewsSlidesComponent,
     CardComponent

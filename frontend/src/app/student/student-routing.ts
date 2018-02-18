@@ -7,6 +7,8 @@ import { FakeNewsSlideContainerComponent } from './guide/slide-containers/fake-n
 import { SocialmediaIntroComponent } from "./guide/intro/socialmedia-intro/socialmedia-intro.component";
 import {SummaryComponent} from "./guide/summary/summary.component";
 import {SocialMediaSlideContainerComponent} from "./guide/slide-containers/social-media-slide-container/social-media-slide-container.component";
+import { TestComponent } from './test/test.component';
+import { TestResolver } from '../api/resolvers/test.resolver';
 
 const studentRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -22,6 +24,13 @@ const studentRoutes: Routes = [
       { path: '', redirectTo: '1', pathMatch: 'full' },
       { path: '**', redirectTo: '1', pathMatch: 'full' }
     ]
+  },
+  {
+    path: 'test/:id',
+    component: TestComponent,
+    resolve: {
+      test: TestResolver
+    }
   }
 ];
 

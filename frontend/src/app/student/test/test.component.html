@@ -1,3 +1,30 @@
-<p>
-  test works!
-</p>
+<div *ngIf="currentQuestion !== questionsCount && !testFinished">
+  Pytanie nr {{ currentQuestion + 1 }}
+
+  Pytanie: {{ test.questions[currentQuestion]['question'] }}
+
+  <ng-container *ngIf="test.questions[currentQuestion]['image_path']">
+    Obrazek do pytania:
+    <img [src]="apiUrl + test.questions[currentQuestion]['image_path']" alt="">
+  </ng-container>
+
+  Odpowiedzi:
+  <form [formGroup]="answers.get(test.questions[currentQuestion]['id'].toString())">
+    <p>Wybierz przynajmniej jedną odpowiedź, aby przejść do kolejnego pytania.</p>
+    <label *ngFor="let answer of test.questions[currentQuestion]['answers']">
+      {{ answer.label }}
+      <input type="checkbox" [formControlName]="answer.id">
+    </label>
+    <button type="button"
+            [disabled]="answers.get(test.questions[currentQuestion]['id'].toString()).invalid"
+            (click)="nextQuestion()">Następne pytanie</button>
+  </form>
+</div>
+
+<div *ngIf="testFinished">
+  Koniec pytań
+
+  <p *ngIf="userScore !== 'no score'">
+    Twój wynik to {{ userScore }}%.
+  </p>
+</div>
