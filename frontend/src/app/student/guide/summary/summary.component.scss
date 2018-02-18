@@ -1,0 +1,20 @@
+@import '../../../../styles.scss';
+
+.welcome-boxes {
+  margin-top: 55px;
+}
+
+.info-box {
+  margin-right: 60px;
+  min-height: 382px;
+
+  img {
+    height: 70px;
+    width: 70px;
+
+    @include media(xl-up) {
+      height: 110px;
+      width: 110px;
+    }
+  }
+}

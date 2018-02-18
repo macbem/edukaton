@@ -3,14 +3,14 @@
 .tutorial-nav-wrapper {
   width: 100%;
   height: 70px;
+  margin-top: 45px;
   background-color: pal(white);
-  position: fixed;
-  bottom: 0;
   border-top: 1px solid #edf4fa;
+  border-radius: 10px;
 
   .container {
     @include media(xl-up) {
-      padding: 0 7%;
+      padding: 0 4%;
     }
   }
 
@@ -20,7 +20,7 @@
 
   a {
     @include font(16, bold);
-    color: #c2d7e7;
+    color: pal(blue, faded);
     margin-right: 75px;
 
     &.active {

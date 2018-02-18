@@ -6,4 +6,14 @@
 
 .info-box {
   margin-right: 60px;
+
+  img {
+    height: 70px;
+    width: 70px;
+
+    @include media(xl-up) {
+      height: 110px;
+      width: 110px;
+    }
+  }
 }

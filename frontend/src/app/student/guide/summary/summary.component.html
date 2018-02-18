@@ -1,3 +1,33 @@
-<p>
-  summary works!
-</p>
+<div class="dashboard-wrapper" style="overflow-y: scroll">
+  <div class="container">
+    <app-header></app-header>
+    <div class="welcome">
+      <span class="preheading">Poradnik</span>
+      <h1 class="heading heading--hero">
+        Przeszedłeś cały poradnik. <br>
+        Gratulacje!
+      </h1>
+    </div>
+
+    <div class="welcome-boxes row no-gutters">
+      <div class="col-xs-6">
+        <div class="info-box row align-center justify-center">
+          <div class="col align-center justify-center">
+            <a routerLink="/dashboard">
+              <button class="btn btn--faded">Wróć do strony głównej</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="info-box">
+          <div class="col align-center justify-center">
+            <img src="/assets/images/test.svg" alt="tutorial">
+            <p class="heading heading--secondary">Rozpocznij test wiedzy</p>
+            <button class="btn">Start</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

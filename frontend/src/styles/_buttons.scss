@@ -5,7 +5,7 @@
   color: pal(white);
   padding-left: 40px;
   padding-right: 40px;
-  background-color: #2fc9ff;
+  background-color: pal(blue);
   box-shadow: 0 22px 34px 0 rgba(27, 120, 199, 0.18);
   transition: background-color 0.2s ease;
   height: 58px;
@@ -31,6 +31,10 @@
     background: transparent;
     color: pal(black);
     border: 2px solid #2fc9ff;
+  }
+
+  &--faded {
+    background-color: pal(blue, faded);
   }
 
   &--semi-transparent {

@@ -20,11 +20,11 @@
   @include font-weight(bold);
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #c1d7e8;
+  color: pal(copy, on-light);
   margin-bottom: 10px;
 
   &--dark {
-    color: #072035;
+    color: pal(black, light);
   }
 }
 

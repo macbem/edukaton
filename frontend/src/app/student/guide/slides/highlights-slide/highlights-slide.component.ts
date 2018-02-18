@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import {AfterViewChecked, Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import * as intro from 'intro.js';
 
 export interface IHighlightPoint {
@@ -21,7 +21,7 @@ export interface IIntroJsInput {
   templateUrl: './highlights-slide.component.html',
   styleUrls: ['./highlights-slide.component.scss']
 })
-export class HighlightsSlideComponent implements OnInit, OnDestroy {
+export class HighlightsSlideComponent implements OnInit, OnDestroy, AfterViewChecked {
   @Input() highlights: IHighlightPoint[];
   @Input() imageSrc: string;
   @Output('introJsEnd') introJsEnd: EventEmitter<any> = new EventEmitter();
@@ -64,7 +64,12 @@ export class HighlightsSlideComponent implements OnInit, OnDestroy {
     this.introJsInstance.setOptions({
       steps: this.prepareIntroJsInput(this.highlights),
       exitOnOverlayClick: false,
-      hidePrev: true
+      hidePrev: true,
+      overlayOpacity: 0.1,
+      exitOnEsc: false,
+      nextLabel: 'Następny',
+      prevLabel: 'Poprzedni',
+      doneLabel: 'Koniec'
     });
 
     const exitHandler = (() => {

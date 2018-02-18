@@ -33,7 +33,7 @@
 }
 
 .preheading {
-  color: #3DBCF8;
+  color: pal(blue);
   text-transform: uppercase;
   @include font(12, heavy);
   letter-spacing: 1px;
@@ -52,7 +52,7 @@
   p {
     @include font (18, bold);
     line-height: 1.44;
-    color: #072035;
+    color: pal(black, light);
     margin: 35px 0;
   }
 }

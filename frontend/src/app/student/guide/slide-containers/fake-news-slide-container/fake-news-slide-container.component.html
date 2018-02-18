@@ -1,6 +1,9 @@
 <div class="dashboard-wrapper" style="overflow-y: scroll">
   <div class="container">
     <app-header></app-header>
+
+    <app-tutorial-nav [categories]="categories" [stepName]="'fakenews'"></app-tutorial-nav>
+
     <div class="welcome">
       <h1 class="heading heading--hero white">
         Fake News
@@ -8,39 +11,6 @@
     </div>
 
     <ng-container *ngIf="currentSlideId === 1">
-      <div class="row align-end">
-        <h5 class="heading heading--secondary white">{{ currentSlideId }}. Przyjrzyj się wyglądowi strony 1</h5>
-
-        <div class="tutorial-navigation-steps row">
-          <p class="heading heading--secondary white">{{ currentSlideId }} / <span class="heading--faded">{{ slidesCount }}</span></p>
-          <div class="arrows">
-            <div class="go-to-step" (click)="prev()">
-              <div class="chevron left"></div>
-            </div>
-            <div class="go-to-step" (click)="next()">
-              <div class="chevron right active"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tutorial-content">
-        <div class="box box--large">
-          <div class="row align-center">
-            <div class="col-xs-7">
-              <p>Strony szerzące Fake News często sprawiają wrażenie nieprofesjonalnych. </p>
-              <p>Znajdziesz na nich obrazki niskiej jakości, błędy gramatyczne i językowe oraz niewielką liczbę nowych artykułów.</p>
-              <p>Nie oznacza to, że każda amatorska i rzadko aktualizowana strona propaguje fałszywe wiadomości, ale poruszając się po takich witrynach warto zachowywać szczególną ostrożność. </p>
-            </div>
-            <div class="col-xs-5">
-              <img src="/assets/images/fakenews1.jpg" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </ng-container>
-
-    <ng-container *ngIf="currentSlideId === 2">
       <div class="row align-end">
         <h5 class="heading heading--secondary white">{{ currentSlideId  }}. Przyjrzyj się wyglądowi strony 2</h5>
 
@@ -73,21 +43,13 @@
       </div>
     </ng-container>
 
-    <ng-container *ngIf="currentSlideId === 3">
+    <ng-container *ngIf="currentSlideId === 2">
       <app-highlights-slide style="display: block;"
-                            [imageSrc]="'https://cdn.vox-cdn.com/thumbor/Ei4ydi9WDwJW-dpSW_QWMiVULNs=/0x0:2012x1341/1820x1213/filters:focal(0x0:2012x1341):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/47070706/google2.0.0.jpg'"
+                            [imageSrc]="'/assets/images/fakenews_screen.png'"
                             [highlights]="highlights"
                             (introJsEnd)="next()"
       ></app-highlights-slide>
     </ng-container>
 
-    <ng-container *ngIf="currentSlideId === 4">
-      asdadad
-      <app-highlights-slide style="display: block;"
-                            [imageSrc]="'https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/03/06/104324660-GettyImages-634597358.1910x1000.jpg'"
-                            [highlights]="highlights"
-                            (introJsEnd)="next()"
-      ></app-highlights-slide>
-    </ng-container>
   </div>
 </div>

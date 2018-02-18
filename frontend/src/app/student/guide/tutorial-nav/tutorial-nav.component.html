@@ -1,13 +1,23 @@
 <div class="tutorial-nav-wrapper">
   <div class="container">
     <div class="tutorial-nav row align-center justify-start">
-      <a *ngFor="let category of categories; index as i"
-         [attr.data-index]="i"
-         [routerLink]="['/', 'tutorial', category.id]"
-         [routerLinkActive]="'active'"
-      >
-        {{ i + 1 }}. {{ category.name }}
+      <!--<a *ngFor="let category of categories; index as i"-->
+         <!--[attr.data-index]="i"-->
+         <!--[routerLink]="['/', 'tutorial', category.id]"-->
+         <!--[routerLinkActive]="'active'"-->
+      <!--&gt;-->
+        <!--{{ i + 1 }}. {{ category.name }}-->
+      <!--</a>-->
+      <a routerLink="/tutorial/1" [class.active]="stepName === 'fakenews'">
+        1. Fake News
       </a>
+      <a routerLink="/tutorial/2" [class.active]="stepName === 'social'">
+        2. Zagrożenia w Social Media
+      </a>
+      <a routerLink="/tutorial/summary" [class.active]="stepName === 'summary'" style="cursor: initial">
+        3. Podsumowanie
+      </a>
+
     </div>
   </div>
 </div>
