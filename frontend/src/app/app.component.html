@@ -1,7 +1,7 @@
 <div class="app row">
-  <app-nav-inside-menu [menuVisible]="menuVisible" (onLinkClick)="nav.hideMenu($event)" #menu *ngIf="!isRouteLogin"></app-nav-inside-menu>
+  <app-nav-inside-menu [menuVisible]="menuVisible" (onLinkClick)="nav.hideMenu($event)" #menu></app-nav-inside-menu>
 
-  <app-nav [menuVisible]="menuVisible" class="nav" #nav (toggle)="menu.toggleNavMenu($event)" *ngIf="!isRouteLogin"></app-nav>
+  <app-nav [menuVisible]="menuVisible" class="nav" #nav (toggle)="menu.toggleNavMenu($event)"></app-nav>
 
   <div class="main">
     <router-outlet></router-outlet>

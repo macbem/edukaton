@@ -18,7 +18,7 @@ interface Toast {
   styleUrls: ['./toast.component.scss']
 })
 export class ToastComponent {
-  private list: any[] = [];
+  public list: any[] = [];
 
   constructor() {
   }

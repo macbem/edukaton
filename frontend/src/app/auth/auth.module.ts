@@ -8,6 +8,7 @@ import { NoAuthGuard } from './guards/noauth.guard';
 import { AuthRoutingModule } from './auth-routing';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TestResolver } from '../api/resolvers/test.resolver';
 
 @NgModule({
   imports: [
@@ -17,7 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService, AuthGuard, NoAuthGuard],
+  providers: [AuthService, AuthGuard, NoAuthGuard, TestResolver],
   declarations: [RegistrationComponent, LoginComponent]
 })
 export class AuthModule { }
