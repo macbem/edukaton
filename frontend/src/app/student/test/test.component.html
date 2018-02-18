@@ -23,4 +23,8 @@
 
 <div *ngIf="testFinished">
   Koniec pytań
+
+  <p *ngIf="userScore !== 'no score'">
+    Twój wynik to {{ userScore }}%.
+  </p>
 </div>

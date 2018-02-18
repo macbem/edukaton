@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/forkjoin';
-import { map, tap } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 import { forkJoin } from 'rxjs/observable/forkJoin';
 
 @Injectable()
@@ -37,7 +37,21 @@ export class TestService {
   sendAnswers(testId: number, answers: any[]) {
     return this.http.post(`${environment.apiUrl}/api/tests/${testId}/submit`, {
       answers: this.serializeAnswers(answers)
-    });
+    }).pipe(
+      catchError(() => Observable.of('no score')),
+      map(this.calculateScore)
+    );
+  }
+
+  calculateScore(response) {
+    if (!response) {
+      return 'no score';
+    }
+
+    const questionsCount = response.question_ids.length;
+    const correctlyAnsweredCount = response.submission.questions.filter(question => question.is_correct);
+
+    return Math.floor(correctlyAnsweredCount / questionsCount * 100);
   }
 
   fetchAllTestsData() {

@@ -17,6 +17,7 @@ export class TestComponent implements OnInit {
   public currentQuestion: number = 0;
   public answers: FormGroup;
   public apiUrl: string;
+  public userScore: number;
 
   constructor(private route: ActivatedRoute, private testService: TestService) {
     this.apiUrl = environment.apiUrl;
@@ -55,8 +56,9 @@ export class TestComponent implements OnInit {
       this.answerSubmitted = true;
       this.testService.sendAnswers(this.test.id, this.answers.value)
         .toPromise()
-        .catch(() => true)
-        .then(() => {
+        .catch((error) => 'no score')
+        .then((score: any) => {
+          this.userScore = score;
           this.testFinished = true;
         });
     }
