@@ -7,6 +7,8 @@ import { RouterModule } from "@angular/router";
 import { AuthService } from "../auth/auth.service";
 import { TeacherGuard } from "./teacher.guard";
 import { StudentResultComponent } from './student-result/student-result.component';
+import { CreateNewTestComponent } from './create-new-test/create-new-test.component';
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   imports: [
@@ -17,7 +19,9 @@ import { StudentResultComponent } from './student-result/student-result.componen
   ],
   declarations: [
     DashboardComponent,
-    StudentResultComponent
+    StudentResultComponent,
+    CreateNewTestComponent,
+    QuestionComponent
   ],
   providers: [
     AuthService,

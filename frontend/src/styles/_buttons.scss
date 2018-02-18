@@ -18,20 +18,19 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 
-  &--wide {
-
-  }
-
-  &--small {
-
-  }
-
   &--block {
     width: 100%;
   }
 
   &--white {
     background: pal(white);
+    color: pal(black);
+  }
+
+  &--outline {
+    background: transparent;
+    color: pal(black);
+    border: 2px solid #2fc9ff;
   }
 
   &--semi-transparent {
