@@ -1,0 +1,32 @@
+<div class="dashboard-wrapper" style="overflow-y: scroll">
+  <div class="container">
+    <app-header></app-header>
+    <div class="welcome">
+      <h1 class="heading heading--hero white">
+        Witaj w panelu nauczyciela!
+      </h1>
+    </div>
+
+    <div class="row align-center choose-test-wrapper">
+      <span class="copy copy--faded">Wybierz test</span>
+      <select name="" id=""></select>
+      <span class="copy copy--faded">lub</span>
+      <button class="btn">Stwórz nowy test</button>
+    </div>
+
+    <div class="test-results-wrapper">
+      <div class="box">
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="test-results">
+              <app-student-result *ngFor="let result of [1,2,3,4,5]; index as i" [index]="i"></app-student-result>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <!--<app-chart></app-chart>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,18 +1,5 @@
 @import '../../../styles.scss';
 
-.dashboard {
-  &-wrapper {
-    height: 100vh;
-    padding-bottom: 60px;
-
-    .welcome {
-      width: 70%;
-      color: pal(white);
-      margin-top: 80px;
-    }
-  }
-}
-
 .welcome-boxes {
   margin-top: 55px;
 }
