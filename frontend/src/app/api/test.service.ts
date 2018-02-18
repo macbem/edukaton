@@ -43,6 +43,13 @@ export class TestService {
     );
   }
 
+  createTest(testName: string, questions: number[]) {
+    return this.http.post(`${environment.apiUrl}/api/tests/create`, {
+      name: testName,
+      question_ids: questions
+    });
+  }
+
   calculateScore(response) {
     if (!response) {
       return 'no score';
@@ -84,6 +91,15 @@ export class TestService {
     );
   }
 
+  fetchAllQuestions() {
+    return forkJoin([
+      this.getAllAvailableQuestions(),
+      this.getAllAvailableCategories()
+    ]).pipe(
+      map(this.mapQuestionData)
+    );
+  }
+
   getCachedTestData() {
     return this.cachedTestData;
   }
@@ -114,6 +130,13 @@ export class TestService {
     });
 
     return serializedAnswers;
+  }
+
+  mapQuestionData([questions, categories]) {
+    return questions.data.map(question => ({
+      ...question,
+      category: categories.data.find(entry => entry.id === question.category_id)
+    }));
   }
 
   mapTestsData([tests, questions, categories]) {
