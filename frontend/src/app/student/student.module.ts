@@ -6,7 +6,6 @@ import { SharedModule } from '../shared/shared.module';
 
 import { TestComponent } from './test/test.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SummaryComponent } from './guide/summary/summary.component';
 import { FakenewsIntroComponent } from './guide/intro/fakenews-intro/fakenews-intro.component';
 import { FakenewsSlidesComponent } from './guide/slides/fakenews-slides/fakenews-slides.component';
 import { CardComponent } from './guide/card/card.component';
@@ -16,10 +15,13 @@ import { RouterModule } from '@angular/router';
 import { FakeNewsSlideContainerComponent } from './guide/slide-containers/fake-news-slide-container/fake-news-slide-container.component';
 import { HighlightsSlideComponent } from './guide/slides/highlights-slide/highlights-slide.component';
 import { SocialmediaIntroComponent } from './guide/intro/socialmedia-intro/socialmedia-intro.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule,
     SharedModule,
     StudentRoutingModule,
@@ -27,7 +29,6 @@ import { SocialmediaIntroComponent } from './guide/intro/socialmedia-intro/socia
   declarations: [
     TestComponent,
     DashboardComponent,
-    SummaryComponent,
     FakenewsIntroComponent,
     FakenewsSlidesComponent,
     CardComponent,
@@ -40,7 +41,6 @@ import { SocialmediaIntroComponent } from './guide/intro/socialmedia-intro/socia
   exports: [
     TestComponent,
     DashboardComponent,
-    SummaryComponent,
     FakenewsIntroComponent,
     FakenewsSlidesComponent,
     CardComponent
