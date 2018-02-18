@@ -16,7 +16,7 @@ export class NavComponent implements OnInit {
     this.toggle.emit(this.menuVisible);
   }
 
-  xyz(state) {
+  hideMenu(state) {
     this.menuVisible = state;
   }
 
