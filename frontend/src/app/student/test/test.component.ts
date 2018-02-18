@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 import { TestService } from '../../api/test.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-test',
@@ -15,8 +16,11 @@ export class TestComponent implements OnInit {
   public test: any;
   public currentQuestion: number = 0;
   public answers: FormGroup;
+  public apiUrl: string;
 
-  constructor(private route: ActivatedRoute, private testService: TestService) { }
+  constructor(private route: ActivatedRoute, private testService: TestService) {
+    this.apiUrl = environment.apiUrl;
+  }
 
   ngOnInit() {
     this.test = this.route.snapshot.data.test;

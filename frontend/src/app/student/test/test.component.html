@@ -2,6 +2,12 @@
   Pytanie nr {{ currentQuestion + 1 }}
 
   Pytanie: {{ test.questions[currentQuestion]['question'] }}
+
+  <ng-container *ngIf="test.questions[currentQuestion]['image_path']">
+    Obrazek do pytania:
+    <img [src]="apiUrl + test.questions[currentQuestion]['image_path']" alt="">
+  </ng-container>
+
   Odpowiedzi:
   <form [formGroup]="answers.get(test.questions[currentQuestion]['id'].toString())">
     <p>Wybierz przynajmniej jedną odpowiedź, aby przejść do kolejnego pytania.</p>
