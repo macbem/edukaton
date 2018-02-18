@@ -9,11 +9,25 @@
   -->
 
   <div *ngIf="testFinished">
-    Koniec pytań
+    <div class="test-question-header">
+      <div class="welcome">
+        <span class="preheading">TEST WIEDZY</span>
+        <h1 class="heading heading--hero heading--white">
+          Ukończyłeś test. Gratulacje!
+        </h1>
+      </div>
+    </div>
 
-    <p *ngIf="userScore !== 'no score'">
-      Twój wynik to {{ userScore }}%.
-    </p>
+    <div *ngIf="userScore !== 'no score'">
+      <div class="test-content-block">
+        <div class="test-score">
+          <div class="test-score__value">
+            {{ userScore }}%.
+          </div>
+          <div class="test-score__label">Poprawnych odpowiedzi</div>
+        </div>
+      </div>
+    </div>
   </div>
 
 
@@ -38,7 +52,7 @@
     </div>
 
     <form
-      class="test-answer-select"
+      class="test-content-block test-answer-select"
       [formGroup]="answers.get(test.questions[currentQuestion]['id'].toString())"
     >
       <div
