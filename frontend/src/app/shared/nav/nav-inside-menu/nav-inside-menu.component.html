@@ -1,29 +1,33 @@
-<div class="nav-menu-wrapper" [class.active]="isMenuActive">
+<div class="nav-menu-wrapper" [class.active]="menuVisible">
   <div class="nav-menu col justify-between">
     <ul class="menu heading heading--secondary bold">
-      <a routerLink="/dashboard" (click)="isMenuActive = false">
+      <a routerLink="/dashboard" (click)="hideMenu()">
         <li class="menu-item">Strona główna</li>
       </a>
       <li class="menu-item">
-        <a routerLink="/tutorial/1" (click)="isMenuActive = false">Poradniki</a>
+        <a routerLink="/tutorial/1" (click)="hideMenu()">Poradniki</a>
         <ul class="submenu">
-          <a routerLink="/tutorial/1" (click)="isMenuActive = false">
+          <a routerLink="/tutorial/1" (click)="hideMenu()">
             <li class="submenu-item">Fake News</li>
           </a>
-          <a routerLink="/tutorial/2" (click)="isMenuActive = false">
+          <a routerLink="/tutorial/2" (click)="hideMenu()">
             <li class="submenu-item">Social Media</li>
           </a>
         </ul>
       </li>
-      <li class="menu-item">Rozpocznij Test Wiedzy</li>
-      <li class="menu-item">Panel Nauczyciela</li>
+      <a routerLink="/" (click)="hideMenu()">
+        <li class="menu-item">Rozpocznij Test Wiedzy</li>
+      </a>
+      <a routerLink="/" (click)="hideMenu()">
+        <li class="menu-item">Panel Nauczyciela</li>
+      </a>
     </ul>
 
     <div class="login-box" *ngIf="!isLoggedIn">
       <div class="col align-center justify-center">
         <img src="" alt="">
         <p class="heading heading--secondary">Zaloguj się, aby śledzić swoje wyniki</p>
-        <button class="btn" [routerLink]="['/login']" (click)="isMenuActive = false">Zaloguj się</button>
+        <button class="btn" [routerLink]="['/login']" (click)="hideMenu()">Zaloguj się</button>
       </div>
     </div>
   </div>
