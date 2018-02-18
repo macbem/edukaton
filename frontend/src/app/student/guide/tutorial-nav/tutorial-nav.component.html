@@ -1,0 +1,13 @@
+<div class="tutorial-nav-wrapper">
+  <div class="container">
+    <div class="tutorial-nav row align-center justify-start">
+      <a *ngFor="let category of categories; index as i"
+         [attr.data-index]="i"
+         [routerLink]="['/', 'tutorial', category.id]"
+         [routerLinkActive]="'active'"
+      >
+        {{ i + 1 }}. {{ category.name }}
+      </a>
+    </div>
+  </div>
+</div>

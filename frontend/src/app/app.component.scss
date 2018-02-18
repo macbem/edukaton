@@ -17,6 +17,7 @@
 .main {
   height: 100vh;
   width: calc(100vw - 100px);
+  overflow-y: scroll;
 }
 
 .contact {

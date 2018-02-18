@@ -1,0 +1,18 @@
+<h1>Fake News</h1>
+<h2>Whatever copy/HTML we need</h2>
+
+<p>All slides: {{ slidesCount }}</p>
+<p>Current slide: {{ currentSlideId + 1 }}</p>
+
+<ng-container *ngIf="currentSlideId === 0">
+  Example Slide 1
+
+  <button (click)="prev()">Go to previous slide</button>
+  <button (click)="next()">Go to next slide</button>
+</ng-container>
+
+<ng-container *ngIf="currentSlideId === 1">
+  Example Slide 2
+  <button (click)="prev()">Go to previous slide</button>
+  <button (click)="next()">Go to next slide</button>
+</ng-container>

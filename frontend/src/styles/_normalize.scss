@@ -67,3 +67,7 @@ a:-webkit-any-link {
 a {
   cursor: pointer;
 }
+
+b {
+  @include font-weight(bold);
+}

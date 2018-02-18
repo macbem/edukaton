@@ -1,0 +1,30 @@
+@import '../../../../styles.scss';
+
+.tutorial-nav-wrapper {
+  width: 100%;
+  height: 70px;
+  background-color: pal(white);
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #edf4fa;
+
+  .container {
+    @include media(xl-up) {
+      padding: 0 7%;
+    }
+  }
+
+  .tutorial-nav {
+    height: 70px;
+  }
+
+  a {
+    @include font(16, bold);
+    color: #c2d7e7;
+    margin-right: 75px;
+
+    &.active {
+      color: pal(black);
+    }
+  }
+}
