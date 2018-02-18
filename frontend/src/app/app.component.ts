@@ -33,6 +33,4 @@ export class AppComponent {
       window.scrollTo(0, 0)
     });
   }
-
-  move
 }
