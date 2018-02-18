@@ -14,6 +14,7 @@ import { TutorialContainerComponent } from './guide/tutorial-container/tutorial-
 import { TutorialNavComponent } from './guide/tutorial-nav/tutorial-nav.component';
 import { RouterModule } from '@angular/router';
 import { FakeNewsSlideContainerComponent } from './guide/slide-containers/fake-news-slide-container/fake-news-slide-container.component';
+import { SocialmediaIntroComponent } from './guide/intro/socialmedia-intro/socialmedia-intro.component';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import { FakeNewsSlideContainerComponent } from './guide/slide-containers/fake-n
     CardComponent,
     TutorialContainerComponent,
     TutorialNavComponent,
-    FakeNewsSlideContainerComponent
+    FakeNewsSlideContainerComponent,
+    SocialmediaIntroComponent
   ],
   exports: [
     TestComponent,
