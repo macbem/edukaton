@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {MatSnackBar} from "@angular/material";
 
 @Component({
@@ -8,6 +8,8 @@ import {MatSnackBar} from "@angular/material";
 })
 export class QuestionComponent implements OnInit {
   @Input('index') index: number;
+  @Input('question') question: any;
+  @Output('toggleQuestion') toggleQuestion: EventEmitter<number> = new EventEmitter();
   isAdded = false;
 
   constructor(public snackBar: MatSnackBar) { }
@@ -20,6 +22,8 @@ export class QuestionComponent implements OnInit {
     this.snackBar.open('Pytanie zostało dodane.', 'Zamknij', {
       duration: 1000,
     });
+
+    this.toggleQuestion.emit(this.question.id);
   }
 
   removeFromTest() {
@@ -27,5 +31,7 @@ export class QuestionComponent implements OnInit {
     this.snackBar.open('Pytanie zostało usunięte.', 'Zamknij', {
       duration: 1000,
     });
+
+    this.toggleQuestion.emit(this.question.id);
   }
 }

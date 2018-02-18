@@ -9,6 +9,7 @@ import { AuthRoutingModule } from './auth-routing';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestResolver } from '../api/resolvers/test.resolver';
+import { QuestionsResolver } from '../api/resolvers/questions.resolver';
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ import { TestResolver } from '../api/resolvers/test.resolver';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService, AuthGuard, NoAuthGuard, TestResolver],
+  providers: [AuthService, AuthGuard, NoAuthGuard, TestResolver, QuestionsResolver],
   declarations: [RegistrationComponent, LoginComponent]
 })
 export class AuthModule { }

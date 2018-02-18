@@ -9,12 +9,14 @@ import { TeacherGuard } from "./teacher.guard";
 import { StudentResultComponent } from './student-result/student-result.component';
 import { CreateNewTestComponent } from './create-new-test/create-new-test.component';
 import { QuestionComponent } from './question/question.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     SharedModule,
+    FormsModule,
     TeacherRoutingModule
   ],
   declarations: [

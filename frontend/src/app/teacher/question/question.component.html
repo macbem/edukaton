@@ -1,11 +1,10 @@
 <div class="question-wrapper">
   <div class="box box--big">
-    <p class="question">This is question {{ index + 1 }}. Are you ready?</p>
+    <p class="question">{{ question.question }}</p>
     <ul class="answers">
-      <li class="answer">A) Answer 1</li>
-      <li class="answer answer--valid">B) Answer 2</li>
-      <li class="answer answer--valid">C) Answer 3</li>
-      <li class="answer">D) Answer 4</li>
+      <li class="answer"
+          [class.answer--valid]="answer.is_correct"
+          *ngFor="let answer of question.answers; index as i;">{{i + 1}}. {{ answer.label }}</li>
     </ul>
   </div>
 

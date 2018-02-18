@@ -11,14 +11,21 @@
       </h2>
     </div>
 
-    <div class="questions">
-      <h3 class="heading heading--secondary">Pytania z kategorii Fake News</h3>
-      <app-question *ngFor="let result of [1,2,3,4,5]; index as i" [index]="i"></app-question>
-    </div>
+    <label class="copy">
+      <p class="copy copy--faded">Nazwa testu</p>
+      <input type="text" [(ngModel)]="testName" required class="input">
+    </label>
 
-    <div class="questions">
-      <h3 class="heading heading--secondary">Pytania z kategorii Social Media</h3>
-      <app-question *ngFor="let result of [1,2,3,4,5]; index as i" [index]="i"></app-question>
+    <div class="questions" *ngFor="let category of availableQuestionCategories;">
+      <h3 class="heading heading--secondary">Pytania z kategorii {{ category }}</h3>
+      <ng-container *ngFor="let question of availableQuestions; index as i">
+        <app-question
+          *ngIf="question.category.title === category"
+          [index]="i"
+          (toggleQuestion)="toggleQuestion($event)"
+          [question]="question">
+        </app-question>
+      </ng-container>
     </div>
 
     <button class="btn btn--white" (click)="saveTest()">Stwórz test</button>
