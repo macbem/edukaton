@@ -1,0 +1,14 @@
+<div class="highlights-container" style="display: inline-block; position: relative;">
+  <img [src]="imageSrc" width="200">
+  <div
+    *ngFor="let highlight of highlights;"
+    [ngStyle]="{
+      'left': highlight.offsetLeftPercentage + '%',
+      'top': highlight.offsetTopPercentage + '%',
+      'height': highlight.height + '%',
+      'width': highlight.width + '%',
+      'position': 'absolute'
+    }"
+    [attr.data-intro-el]="highlight.selector"
+  ></div>
+</div>

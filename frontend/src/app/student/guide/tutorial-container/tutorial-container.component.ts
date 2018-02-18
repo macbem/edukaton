@@ -18,10 +18,5 @@ export class TutorialContainerComponent {
   }];
 
   constructor() {}
-
-  getRouterOutletState(outlet) {
-    console.log(outlet)
-    return outlet.isActivated ? outlet.activatedRoute : '';
-  }
 }
 

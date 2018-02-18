@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GenericSlideContainer, GenericSlideContainerClass } from '../generic-slide-container';
+import { IHighlightPoint } from '../../slides/highlights-slide/highlights-slide.component';
 
 @Component({
   selector: 'app-fake-news-slide-container',
@@ -9,7 +10,16 @@ import { GenericSlideContainer, GenericSlideContainerClass } from '../generic-sl
 })
 export class FakeNewsSlideContainerComponent extends GenericSlideContainerClass implements GenericSlideContainer {
   public currentSlideId = 0;
-  public slidesCount = 2;
+  public slidesCount = 3;
+  public highlights: IHighlightPoint[] = [
+    {
+      offsetLeftPercentage: 0,
+      offsetTopPercentage: 0,
+      height: 20,
+      width: 30,
+      title: 'sda',
+    }
+  ];
 
   constructor(private router: Router, private route: ActivatedRoute) {
     super();
