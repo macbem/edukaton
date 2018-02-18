@@ -49,7 +49,7 @@ export class TestService {
     }
 
     const questionsCount = response.question_ids.length;
-    const correctlyAnsweredCount = response.submission.questions.filter(question => question.is_correct);
+    const correctlyAnsweredCount = response.submission.questions.filter(question => question.is_correct).length;
 
     return Math.floor(correctlyAnsweredCount / questionsCount * 100);
   }
