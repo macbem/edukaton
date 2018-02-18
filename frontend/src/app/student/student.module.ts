@@ -14,8 +14,8 @@ import { TutorialNavComponent } from './guide/tutorial-nav/tutorial-nav.componen
 import { RouterModule } from '@angular/router';
 import { FakeNewsSlideContainerComponent } from './guide/slide-containers/fake-news-slide-container/fake-news-slide-container.component';
 import { HighlightsSlideComponent } from './guide/slides/highlights-slide/highlights-slide.component';
-import { SocialmediaIntroComponent } from './guide/intro/socialmedia-intro/socialmedia-intro.component';
-import { SocialMediaSlideContainerComponent } from './guide/slide-containers/social-media-slide-container/social-media-slide-container.component';
+// import { SocialmediaIntroComponent } from './guide/intro/socialmedia-intro/socialmedia-intro.component';
+// import { SocialMediaSlideContainerComponent } from './guide/slide-containers/social-media-slide-container/social-media-slide-container.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SummaryComponent } from "./guide/summary/summary.component";
 
@@ -38,8 +38,8 @@ import { SummaryComponent } from "./guide/summary/summary.component";
     TutorialNavComponent,
     FakeNewsSlideContainerComponent,
     HighlightsSlideComponent,
-    SocialmediaIntroComponent,
-    SocialMediaSlideContainerComponent,
+    // SocialmediaIntroComponent,
+    // SocialMediaSlideContainerComponent,
     SummaryComponent
   ],
   exports: [
